@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nexus International | About Us</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Favicon -->
+     <link rel="shortcut icon" href="{% static 'img/logo/favicon.png' %}" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+          
+        <div class="offcanvas__logo">
+            <a href="{% url 'index' %}"><img src="{% static 'img/logo/Nexus Logo.png' %}" alt="Nexus"></a>
+        </div>
+        <nav class="offcanvas__menu mobile-menu">
+            <ul>
+                <li class="active"><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="#">About</a>
+                        <ul class="dropdown">
+                            <li><a href="{% url 'about' %}">About us</a></li>
+                            <li><a href="{% url 'profile' %}">Profile</a></li>
+                            <li><a href="{% url 'management' %}">Management</a></li>
+                            <li><a href="{% url 'fcrime' %}">Financial Crime</a></li>
+                            <li><a href="{% url 'license' %}">License</a></li>
+                                
+                        </ul>
+                    </li>
+                    <li><a href="#">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="{% url 'tf' %}">Trade Finance Solutions</a>
+                                <ul class="dropdown-lists">
+                                    <li><a href="{% url 'bg' %}">Bank Guarantee</a></li>
+                                    <li><a href="{% url 'slc' %}">Standby Letter of Credit</a></li>
+                                    <li><a href="{% url 'dlc' %}">Documentary Letter of Credit</a></li>
+                                    <li><a href="{% url 'pof' %}">Proof of Funds</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'facs' %}">Financial Advisory and Consulting Services</a></li>
+                            <li><a href="{% url 'cfa' %}">Corporate Finance Advisory</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="{% url 'contact' %}">Contact</a></li>                                
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <ul class="offcanvas__widget">
+            <li><i class="fa fa-map-marker"></i> Anjouan</li>
+            <li><i class="fa fa-phone"></i>+441223790627</li>
+            <li><i class="fa fa-envelope"></i> Info@nexus.com</li>
+        </ul>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header_top">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="header_top_widget">
+                            <li><i class="fa fa-map-marker"></i> Anjouan</li>
+                            <li><i class="fa fa-phone"></i>+441223790627</li>
+                            <li><i class="fa fa-envelope"></i> Info@nexus.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header_logo">
+                        <a href="{% url 'index' %}"><img src="{% static 'img/logo/Nexus Logo.png' %}" alt="Nexus"></a>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="header_nav">
+                        <nav class="header_menu">
+                            <ul>
+                                <li><a href="{% url 'index' %}">Home</a></li>
+                                <li class="active"><a href="#">About</a>
+                                    <ul class="dropdown">
+                                        <li class="active"> <a href="{% url 'about' %}">About us</a></li>
+                                        <li><a href="{% url 'profile' %}">Profile</a></li>
+                                        <li><a href="{% url 'management' %}">Management</a></li>
+                                        <li><a href="{% url 'fcrime' %}">Financial Crime</a></li>
+                                        <li><a href="{% url 'license' %}">License</a></li>
+                                         
+                                    </ul>
+                                </li>
+                                <li><a href="#">Services</a>
+                                    <ul class="dropdown">
+                                        <li><a href="{% url 'tf' %}">Trade Finance Solutions</a>
+                                            <ul class="dropdown-lists">
+                                                <li><a href="{% url 'bg' %}">Bank Guarantee</a></li>
+                                                <li><a href="{% url 'slc' %}">Standby Letter of Credit</a></li>
+                                                <li><a href="{% url 'dlc' %}">Documentary Letter of Credit</a></li>
+                                                <li><a href="{% url 'pof' %}">Proof of Funds</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'facs' %}">Financial Advisory and Consulting Services</a></li>
+                                        <li><a href="{% url 'cfa' %}">Corporate Finance Advisory</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <span class="fa fa-bars"></span>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- toper Section Begin -->
+    <div class="breadcrumb-option set-bg" data-setbg="{% static 'img/breadcrumb/aboutusbanner.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2 class="toper-text">About Us</h2>
+                        <div class="breadcrumb__links">
+                            <a href="{% url 'index' %}">Home</a>
+                            <span>About</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- toper Section End -->
+
+    <!-- About Section Begin -->
+    <section class="about spad">
+        <div class="container">
+            <div class="about__content">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="about__img swiper mySwiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="{% static 'img/stocks/abt_2.jpeg.jpg' %}" />
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="{% static 'img/stocks/aboutus02.jpeg.jpg' %}" />
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1">
+                        <div class="about__text mt-5">
+                            <h2 class="title">ABOUT US</h2>
+                            <p class="first_para"><span class="highlight"> Nexus International </span> is a finance company licensed in the Union of the Comoros.</p>
+                            <p>Nexus International does not offer services to residents of the Union of the Comoros, nor does it offer services regulated by
+                             FINMA in Switzerland or BaFin in Germany. Additionally, it does not provide financial transactions or services originating from these jurisdictions.</p>
+                             <p>The services of Nexus International are exclusively available to its approved clients and not to the general public.</p>
+                             <p>Nexus International is a dynamic finance company providing a wide range of services for both private and corporate clients. The company boasts extensive expertise in trade finance solutions, private and corporate digital finance, and specializes in innovative blockchain finance services.</p>
+                             <p>Nexus International offer a variety of products in the trade finance sector, including finance guarantees, standby letters of credit, documentary letters of credit, proofs of funds, and warranties—whatever you need, we have it.We want to be one among the top trade finance companies for our reliable services offered with high professionalism</p>
+                             <p>The primary services of Nexus International are centered around our all-in-one wallet. Our user-friendly internet finance platform and mobile app provide clients with 24/7 access to private or corporate accounts, checking accounts, and debit card balances. Additionally, clients can make transfers via smartphones or tablets with multilingual customer support.</p>
+                             <p>We want to be known for our Innovation and Tradition, successfully combining both principles.</p>
+                             <p>We remain open to new developments in finance, welcoming progressive ideas and projects while continually exploring new financial models.</p>
+                             <button class="primary-btn"><a href="{% url 'contact' %}">Contact us</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About End -->
+    
+
+    <!-- mision vision Begin -->
+    <div class="container text-center my-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card mission">
+                    <div class="card-body">
+                        <div class="icon mb-3">
+                            <img src="{% static 'img/about/mission.png' %}" alt="Mission">
+                        </div>
+                        <h3 class="card-title">MISSION</h3>
+                        <p class="card-text">
+                            At Nexus International, our mission is to revolutionize the financial landscape by providing transparent, reliable, and innovative financial solutions that enhance the economic well-being of our clients. We are dedicated to building trust through integrity, fostering growth through personalized service, and driving economic progress through responsible financial practices
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card vision">
+                    <div class="card-body">
+                        <div class="icon mb-3">
+                            <img src="{% static 'img/about/vision.jpeg' %}" alt="Vision">
+                        </div>
+                        <h3 class="card-title">VISION</h3>
+                        <p class="card-text">
+                            We envision a world where financial security and growth are accessible to all. Our aim is to be the most respected and sought-after financial institution known for our commitment to excellence, client-centric approach, innovative solutions, and ethical practices, driving sustainable growth and prosperity for our clients and communities.
+                        </p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <!-- Mission/vision End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="{% url 'index' %}"><img src="{% static 'img/logo/Nexus Logo.png' %}" alt="Nexus"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h5>Services</h5>
+                        <div class="footer__widget">
+                            <ul>
+                                <li><a href="{% url 'tf' %}">Trade Finance</a></li>
+                                <li><a href="{% url 'bg' %}">Bank Guarantee</a></li>
+                                <li><a href="{% url 'slc' %}"> Standby Letter of Credit </a></li>
+                                <li><a href="{% url 'dlc' %}">Documentary Letter of Credit</a></li>
+                                <li><a href="{% url 'pof' %}">Proof of Funds</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+                    <div class="footer__widget footer__widget--address">
+                        <h5>Open Hours</h5>
+                        <p>We work all days a week, Please contact us for any inquiry.</p>
+                        <ul>
+                            <li>Monday - Friday: 11:00 am - 8:00 pm</li>
+                            <li>Saturday: 10:00 am - 6:00 pm</li>
+                            <li>Sunday: 11:00 am - 6:00 pm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <ul class="footer__copyright__links">
+                            <li><a href="#">Terms & Condition</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__copyright__text">
+                            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nicescroll.min.j' %}s"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nexus International</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Favicon -->
+     <link rel="shortcut icon" href="{% static 'img/logo/favicon.png' %}" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+          
+        <div class="offcanvas__logo">
+            <a href="{% url 'index' %}"><img src="{% static 'img/logo/Nexus Logo.png' %}" alt="Nexus"></a>
+        </div>
+        <nav class="offcanvas__menu mobile-menu">
+            <ul>
+                <li class="active"><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="#">About</a>
+                        <ul class="dropdown">
+                            <li><a href="{% url 'about' %}">About us</a></li>
+                            <li><a href="{% url 'profile' %}">Profile</a></li>
+                            <li><a href="{% url 'management' %}">Management</a></li>
+                            <li><a href="{% url 'fcrime' %}">Financial Crime</a></li>
+                            <li><a href="{% url 'license' %}">License</a></li>
+                                
+                        </ul>
+                    </li>
+                    <li><a href="#">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="{% url 'tf' %}">Trade Finance Solutions</a>
+                                <ul class="dropdown-lists">
+                                    <li><a href="{% url 'bg' %}">Bank Guarantee</a></li>
+                                    <li><a href="{% url 'slc' %}">Standby Letter of Credit</a></li>
+                                    <li><a href="{% url 'dlc' %}">Documentary Letter of Credit</a></li>
+                                    <li><a href="{% url 'pof' %}">Proof of Funds</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'facs' %}">Financial Advisory and Consulting Services</a></li>
+                            <li><a href="{% url 'cfa' %}">Corporate Finance Advisory</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="{% url 'contact' %}">Contact</a></li>                                
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <ul class="offcanvas__widget">
+            <li><i class="fa fa-map-marker"></i> Anjouan</li>
+            <li><i class="fa fa-phone"></i>+441223790627</li>
+            <li><i class="fa fa-envelope"></i> Info@nexus.com</li>
+        </ul>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header_top">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="header_top_widget">
+                            <li><i class="fa fa-map-marker"></i> Anjouan</li>
+                            <li><i class="fa fa-phone"></i>+441223790627</li>
+                            <li><i class="fa fa-envelope"></i> Info@nexus.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header_logo">
+                        <a href="{% url 'index' %}"><img src="{% static 'img/logo/Nexus Logo.png' %}" alt="Nexus"></a>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="header_nav">
+                        <nav class="header_menu">
+                            <ul>
+                                <li class="active"><a href="{% url 'index' %}">Home</a></li>
+                                <li><a href="#">About</a>
+                                    <ul class="dropdown">
+                                        <li><a href="{% url 'about' %}">About us</a></li>
+                                        <li><a href="{% url 'profile' %}">Profile</a></li>
+                                        <li><a href="{% url 'management' %}">Management</a></li>
+                                        <li><a href="{% url 'fcrime' %}">Financial Crime</a></li>
+                                        <li><a href="{% url 'license' %}">License</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Services</a>
+                                    <ul class="dropdown">
+                                        <li><a href="{% url 'tf' %}">Trade Finance Solutions</a>
+                                            <ul class="dropdown-lists">
+                                                <li><a href="{% url 'bg' %}">Bank Guarantee</a></li>
+                                                <li><a href="{% url 'slc' %}">Standby Letter of Credit</a></li>
+                                                <li><a href="{% url 'dlc' %}">Documentary Letter of Credit</a></li>
+                                                <li><a href="{% url 'pof' %}">Proof of Funds</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'facs' %}">Financial Advisory and Consulting Services</a></li>
+                                        <li><a href="{% url 'cfa' %}">Corporate Finance Advisory</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                        </nav>
+                         
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <span class="fa fa-bars"></span>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero main-bg" data-setbg="{% static 'img/stocks/mainbanner.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hero__text">
+                        <h2 class="title">Your Digital Off-shore Financial Service</h2>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Home About Begin -->
+    <section class="home-about spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="home_about_text">
+                        <div class="section-title">
+                            <h2 class="title">ABOUT US</h2>
+                            <p class="para-text">Welcome to Nexus International where financial excellence meets personalized service. Founded on integrity, innovation, and customer-centricity principles, we provide comprehensive financial solutions that empower our clients to achieve their goals.<br> <br>Nexus International is a finance company licensed in the Union of the Comoros offering a diverse range of products and services tailored to meet the needs of private and corporate clients.<br> <br>
+                                Nexus International offers various products in the trade finance sector, including finance guarantees, standby letters of credit, documentary letters of credit, proofs of funds, and warranties—whatever you need, we have it. We want to be one of the top trade finance companies for our reliable services offered with high professionalism. </p> 
+                        </div>
+                        <button class="primary-btn"><a href="{% url 'about' %}">learn More</a></button>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1 mt-5">
+                    <div class="swiper-container swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img src="{% static 'img/stocks/aboutus.jpeg.jpg' %}">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="{% static 'img/stocks/aboutus02.jpeg.jpg' %}">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Home About End -->
+
+    <!-- Services Section Begin -->
+    <section class="service spad mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2 class="title">What we offer</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="services_list col-lg-12 col-md-12">
+                <div class="services_item set-bg col-lg-4 col-md-6 col-sm-12" data-setbg="{% static 'img/wallet.jpg' %}">
+                    <div class="services_item_text">
+                        <h4><span>01.</span> Trade Finance Solutions</h4>
+                        <p>Trade finance solutions offered globally through leading banks are facilitated by Nexus International to support business expansion,</p>
+                        <button type="button" class="cardbtn"><a href="{% url 'tf' %}">Find Out More</a></button>
+                    </div>
+                </div>
+                <div class="services_item set-bg col-lg-4" data-setbg="{% static 'img/trade.jpg' %}">
+                    <div class="services_item_text">
+                        <h4><span>02.</span> Financial Advisory and Consulting Services</h4>
+                        <p>Our Financial Advisory and Consulting Services are designed to provide comprehensive support across various financial needs,</p>
+                        <button type="button" class="cardbtn"><a href="{% url 'facs' %}">Find Out More</a></button>
+                    </div>
+                </div>
+                <div class="services_item set-bg col-lg-4" data-setbg="{% static 'img/portfolio.jpg' %}">
+                    <div class="services_item_text">
+                        <h4><span>03.</span> Corporate Finance Advisory</h4>
+                        <p>Our M&A advisory services cover every aspect of the transaction process, from identifying potential targets </p>
+                        <button type="button" class="cardbtn"><a href="{% url 'cfa' %}">Find Out More</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Loan Services Section End -->
+    <!-- Why choose us? -->
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-12 mt-5 mb-5">
+                <h2 class="title text-center">why choose us?</h2>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-box text-center p-3">
+                    <div class="icon mb-3">
+                        <!-- <i class="fa fa-star"></i> -->
+                    </div>
+                    <h5>Expertise</h5>
+                    <p class="card-text justify-content-center">Our team of seasoned financial professionals brings a wealth of knowledge and experience to the table, ensuring you receive the best advice and solutions, be it Trade Finance Solutions , Financial Advisory or Corporate Finance Advisory and consulting Services..</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-box text-center p-3">
+                    <div class="icon mb-3">
+                        <!-- <i class="fa fa-hand"></i> -->
+                    </div>
+                    <h5>Integrity and Transparency</h5>
+                    <p class="card-text justify-content-center">We uphold the highest standards of integrity and transparency in all our dealings, building trust and fostering long-term relationships with our clients.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-box text-center p-3">
+                    <div class="icon mb-3">
+                        <!-- <i class="fa fa-memory"></i> -->
+                    </div>
+                    <h5>Innovative Technology</h5>
+                    <p class="card-text">We leverage cutting-edge technology and innovative financial products to deliver exceptional value and convenience to our clients</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-box text-center p-3">
+                    <div class="icon mb-3">
+                        <!-- i -->
+                    </div>
+                    <h5>Client-Centric Approach</h5>
+                    <p class="card-text">Your satisfaction is our top priority. We listen, understand, and tailor our services to meet your specific needs and goals.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-box text-center p-3">
+                    <div class="icon mb-3">
+                        <!-- <i></i> -->
+                    </div>
+                    <h5>Global Network & Reach </h5>
+                    <p class="card-text">Leverage our extensive global network , we have the capability to support your Trade Finance, Finance and corporate finance needs across multiple markets and regions.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-box text-center p-3">
+                    <div class="icon mb-3">
+                        <!-- <i></i> -->
+                    </div>
+                    <h5>Tailored Solutions</h5>
+                    <p class="card-text">We understand that every business is unique. Our solutions are customized to fit your specific finance requirements.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Why choose us? -->
+   
+
+    
+
+    <!-- Contact Begin -->
+    <div class="contact-widget set-bg" data-setbg="{% static 'img/indexcontact.jpeg' %}" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="contact__widget__item">
+                                <h4>Anjouan</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="contact__widget__phone">
+                        <span>Contact Us Now!</span>
+                          <a href="tel:++441223790627"><h2>+441223790627</h2></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="{% url 'index' %}"><img src="{% static 'img/logo/Nexus Logo.png' %}" alt="Nexus"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h5>Services</h5>
+                        <div class="footer__widget">
+                            <ul>
+                                <li><a href="{% url 'tf' %}">Trade Finance</a></li>
+                                <li><a href="{% url 'bg' %}">Bank Guarantee</a></li>
+                                <li><a href="{% url 'slc' %}"> Standby Letter of Credit </a></li>
+                                <li><a href="{% url 'dlc' %}">Documentary Letter of Credit</a></li>
+                                <li><a href="{% url 'pof' %}">Proof of Funds</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+                    <div class="footer__widget footer__widget--address">
+                        <h5>Open Hours</h5>
+                        <p>We work all days a week, Please contact us for any inquiry.</p>
+                        <ul>
+                            <li>Monday - Friday: 11:00 am - 8:00 pm</li>
+                            <li>Saturday: 10:00 am - 6:00 pm</li>
+                            <li>Sunday: 11:00 am - 6:00 pm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <ul class="footer__copyright__links">
+                            <li><a href="#">Terms & Condition</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__copyright__text">
+                            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+    
+    <!-- Js Plugins -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nicescroll.min.j' %}s"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nexus International | Financial Crime</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Favicon -->
+     <link rel="shortcut icon" href="{% static 'img/logo/favicon.png' %}" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+          
+        <div class="offcanvas__logo">
+            <a href="{% url 'index' %}"><img src="{% static 'img/logo/Nexus Logo.png' %}" alt="Nexus"></a>
+        </div>
+        <nav class="offcanvas__menu mobile-menu">
+            <ul>
+                <li class="active"><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="#">About</a>
+                        <ul class="dropdown">
+                            <li><a href="{% url 'about' %}">About us</a></li>
+                            <li><a href="{% url 'profile' %}">Profile</a></li>
+                            <li><a href="{% url 'management' %}">Management</a></li>
+                            <li><a href="{% url 'fcrime' %}">Financial Crime</a></li>
+                            <li><a href="{% url 'license' %}">License</a></li>
+                                
+                        </ul>
+                    </li>
+                    <li><a href="#">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="{% url 'tf' %}">Trade Finance Solutions</a>
+                                <ul class="dropdown-lists">
+                                    <li><a href="{% url 'bg' %}">Bank Guarantee</a></li>
+                                    <li><a href="{% url 'slc' %}">Standby Letter of Credit</a></li>
+                                    <li><a href="{% url 'dlc' %}">Documentary Letter of Credit</a></li>
+                                    <li><a href="{% url 'pof' %}">Proof of Funds</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'facs' %}">Financial Advisory and Consulting Services</a></li>
+                            <li><a href="{% url 'cfa' %}">Corporate Finance Advisory</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="{% url 'contact' %}">Contact</a></li>                                
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <ul class="offcanvas__widget">
+            <li><i class="fa fa-map-marker"></i>Anjouan</li>
+            <li><i class="fa fa-phone"></i>+441223790627</li>
+            <li><i class="fa fa-envelope"></i> Info@nexus.com</li>
+        </ul>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header_top">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="header_top_widget">
+                            <li><i class="fa fa-map-marker"></i>Anjouan</li>
+                            <li><i class="fa fa-phone"></i>+441223790627</li>
+                            <li><i class="fa fa-envelope"></i> Info@nexus.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header_logo">
+                        <a href="{% url 'index' %}"><img src="{% static 'img/logo/Nexus Logo.png' %}" alt="Nexus"></a>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="header_nav">
+                        <nav class="header_menu">
+                            <ul>
+                                <li><a href="{% url 'index' %}">Home</a></li>
+                                <li class="active"><a href="#">About</a>
+                                    <ul class="dropdown">
+                                        <li><a href="{% url 'about' %}">About us</a></li>
+                                        <li><a href="{% url 'profile' %}">Profile</a></li>
+                                        <li><a href="{% url 'management' %}">Management</a></li>
+                                        <li class="active"><a href="{% url 'fcrime' %}">Financial Crime</a></li>
+                                        <li><a href="{% url 'license' %}">License</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Services</a>
+                                    <ul class="dropdown">
+                                        <li><a href="{% url 'tf' %}">Trade Finance Solutions</a>
+                                            <ul class="dropdown-lists">
+                                                <li><a href="{% url 'bg' %}">Bank Guarantee</a></li>
+                                                <li><a href="{% url 'slc' %}">Standby Letter of Credit</a></li>
+                                                <li><a href="{% url 'dlc' %}">Documentary Letter of Credit</a></li>
+                                                <li><a href="{% url 'pof' %}">Proof of Funds</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'facs' %}">Financial Advisory and Consulting Services</a></li>
+                                        <li><a href="{% url 'cfa' %}">Corporate Finance Advisory</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                        </nav>
+                         
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <span class="fa fa-bars"></span>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+     <!-- toper Section Begin -->
+    <div class="breadcrumb-option set-bg mb-5" data-setbg="{% static 'img/breadcrumb/financialcrime.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2 class="toper-text">Financial crime</h2>
+                        <div class="breadcrumb__links">
+                            <a href="{% url 'index' %}">Home</a>
+                            <a href="{% url 'about' %}">About Us</a>
+                            <span>Financial</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- toper Section End -->
+     <!-- Content starts -->
+      <div class="financial">
+        <div class="container">
+            <div class="col-lg-9 mb-3 mt-5">
+                <h2 class="title topic">Combating Financial Crime:</h2>
+            </div>
+            <div class="col-lg-12">
+                <p class="para-text">Nexus International is dedicated to preventing financial crime by implementing measures to detect and deter money laundering, terrorist financing, and other illegal activities.</p>
+                <p class="para-text">Our policy aims to prevent and deter the use of Nexus International for illegal money laundering activities. For our staff to effectively implement this policy, they must understand its background and how it functions within our daily operations. The success of our policy relies on the vigilance of everyone involved.</p>
+                <p class="para-text">To ensure these policies are effectively implemented, Nexus International and its entire staff must be:</p>
+                <ul class="financial-list">
+                    <li class="list-items">Educated about the legal and regulatory frameworks, as well as the severe legal and regulatory consequences of inadvertently aiding financial crime, in every jurisdiction where we operate.</li>
+                    <li class="list-items">Vigilant regarding the practical methods criminals use to commit financial crimes.</li>
+                    <li class="list-items">Prompt in reporting any suspicious activities to Nexus International management.</li>
+                </ul>
+            </div>
+            <div class="col-lg-9 mb-3 mt-5">
+                <h2 class="title topic">LEGAL AND REGULATORY FRAMEWORK:</h2>
+            </div>
+            <div class="col-lg-12">
+                <p class="para-text">The Union of the Comoros is a member of the Eastern and Southern Africa Anti-Money Laundering Group (ESAAMLG). ESAAMLG's purpose is to combat money laundering by applying the guidelines established by the Financial Action Task Force (FATF). </p>
+                <p class="para-text">FATF is an international organization focused on developing and promoting strategies to prevent money laundering and terrorist financing on both national and global levels.</p>
+                <p class="para-text">This initiative includes collaborating with other international organizations dedicated to fighting money laundering, analyzing emerging regional trends, enhancing institutional and human resource capacities to tackle these issues, and coordinating technical assistance as needed. ESAAMLG allows for regional considerations to be integrated into the enforcement of anti-money laundering measures.</p>
+                <p class="para-text">Members of ESAAMLG engage in a self-assessment process to measure their progress in implementing the FATF's Forty Recommendations.</p>
+                <p class="para-text">The Union of the Comoros is an observer member of the Inter-Governmental Action Group against Money Laundering in West Africa (GIABA). It provides support and assistance in addressing issues related to anti-money laundering and combating the financing of terrorism (AML/CFT).</p>
+                <p class="para-text">GIABA functions as a body within the Economic Community of West African States (ECOWAS), with the responsibility of aiding in the adoption and execution of Anti-Money Laundering (AML) and Counter-Financing of Terrorism (CFT) standards throughout West Africa. Acting similarly to a FATF-Styled Regional Body (FSRB), GIABA cooperates with member nations to guarantee their compliance with global AML/CFT standards.</p>
+            </div>
+            <div class="col-lg-9 mb-3 mt-5">
+                <h2 class="title topic">THE IMPORTANCE OF KNOW YOUR CUSTOMER (“KYC”):</h2>
+            </div>
+            <div class="col-lg-12">
+                <p class="para-text">Nexus International adheres to a rigorous client approval protocol, exclusively extending services such as guarantee issuance to formally approved legal entities, encompassing both individual and corporate entities. Our verification processes are exhaustive, ensuring the bona fides of potential clients prior to their integration into our operational framework.</p>
+
+                <p class="para-text">While our clientele often enters through intermediary agents, it is incumbent upon Nexus International, not the agents, to meticulously verify the identity and authenticity of prospective clients. Given the heightened risk associated with specific geographic regions such as Africa and India concerning money laundering, we maintain uncompromising documentation standards as delineated in our Compliance Agreement.</p>
+
+                <p class="para-text">Moreover, we conduct comprehensive screenings against international sanctions listings prior to accepting any one-time, non-refundable processing fee related to the compliance procedure. Our vigilance transcends the initial client approval phase. Prior to processing applications for guarantees or similar credit facilities, we require verifiable documentary evidence from clients substantiating the genuine commercial nature of the business or contractual arrangements they aim to secure.</p>
+
+                <p class="para-text">This approach serves as a cornerstone in mitigating the potential misuse of our services, underscoring Nexus International's steadfast commitment to compliance and ethical standards within the finance and technology sectors.</p>
+            </div>
+            <div class="col-lg-9 mb-3 mt-5">
+                <h2 class="title topic">WHAT IS MONEY LAUNDERING ?</h2>
+            </div>
+            <div class="col-lg-12">
+                <p class="para-text">Money laundering is a complex process where individuals involved in illegal activities attempt to conceal the origins of unlawfully obtained funds, often referred to as "dirty" money. Although the methods used for money laundering can vary, they generally involve three main stages:</p>
+                <ul class="financial-list">
+                    <li class="list-items"><b>Placement</b> : This initial phase involves placing the illicit funds into the legitimate financial system. This could include depositing the money into bank accounts or making investments to integrate it into legal economic activities.</li>
+                    <li class="list-items"><b>Layering</b> : During this stage, the money undergoes a series of intricate financial transactions aimed at separating it from its illegal origins. These transactions create a complicated trail, making it difficult to trace the money back to its criminal source.</li>
+                    <li class="list-items"><b>Integration</b>: The final step involves reintroducing the laundered funds into circulation through seemingly legitimate channels. At this point, the money appears "clean" or "laundered," making it indistinguishable from funds acquired through legal means.</li>
+                </ul>
+                <p class="para-text">Nexus International remains steadfast in its commitment to combatting money laundering within the finance and technology sectors.</p>
+            </div>
+            <div class="col-lg-9 mb-3 mt-5">
+                <h2 class="title topic">PRACTICAL GUIDANCE TO DETER FINANCIAL CRIME:</h2>
+            </div>
+            <div class="col-lg-12">
+                <p class="para-text">It's a well-known truth that individuals engaged in illegal activities, such as money laundering, do not overtly present themselves as such. While broad generalizations may not always be helpful, certain red flags indicating a suspicious transaction or illicit activity include:</p>
+                <ul class="financial-list">
+                    <li class="list-items">Lack of obvious commercial rationale.</li>
+                    <li class="list-items">Use of 'front men' or 'front companies' not appearing in the corporate structure.</li>
+                    <li class="list-items">Insufficient documentary support for a person or transaction.</li>
+                    <li class="list-items">Excessive concern about secrecy, especially regarding the source of funds.</li>
+                </ul>
+            </div>
+            <div class="col-lg-9 mb-3 mt-5">
+                <h2 class="title topic">REPORTING SUSPICIOUS:</h2>
+            </div>
+            <div class="col-lg-12">
+                <p class="para-text">At Nexus International, reporting suspicions is a critical part of our anti-money laundering efforts. Our Money Laundering Reporting Office (MLRO), integrated into senior management, meticulously oversees our anti-money laundering policies. They report directly to Nexus International's Board, ensuring a top-down approach to combating financial crime. It is mandatory for all staff members to promptly report any suspicions of illicit transactions to ESAAMLG through the MLRO.</p>
+            </div>
+            <div class="col-lg-9 mb-3 mt-5">
+                <h2 class="title topic">RECORD KEEPING:</h2>
+            </div>
+            <div class="col-lg-12">
+                <p class="para-text">At Nexus International, meticulous record keeping is paramount to our operations. We maintain thorough records of our client verification processes, ensuring transparency and compliance. All original documentation, whether in paper or electronic format, is retained throughout a client's approval period and for an additional six years thereafter.</p>
+            </div>
+            <div class="col-lg-9 mb-3 mt-5">
+                <h2 class="title topic">TRAINING FOR STAFF:</h2>
+            </div>
+            <div class="col-lg-12 mb-5">
+                <p class="para-text">At Nexus International, we take responsibility for ensuring our staff are well-equipped to combat money laundering and uphold compliance standards. This includes:</p>
+                <ul class="financial-list">
+                    <li class="list-items">Providing comprehensive training on understanding money laundering and our role in preventing it.</li>
+                    <li class="list-items">Emphasizing the importance of monitoring approved clients and overseeing applicant processes to detect any irregularities.</li>
+                    <li class="list-items">Equipping staff with the knowledge and skills to identify and report suspicious transactions promptly.</li>
+                </ul>
+                <p class="para-text">We conduct periodic refresher training sessions to reinforce these concepts among our team members. Additionally, our Money Laundering Reporting Office (MLRO) and senior management are available to address any questions or concerns related to this topic.</p>
+            </div>
+        </div>
+      </div>
+      
+
+    
+
+    <!-- Contact Begin -->
+    <div class="contact-widget set-bg" data-setbg="{% static 'img/indexcontact.jpeg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="contact__widget__item">
+                                <h4>Anjouan</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="contact__widget__phone">
+                        <span>Contact Us Now!</span>
+                          <a href="tel:++441223790627"><h2>+441223790627</h2></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="{% url 'index' %}"><img src="{% static 'img/logo/Nexus Logo.png' %}" alt="Nexus"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h5>Services</h5>
+                        <div class="footer__widget">
+                            <ul>
+                                <li><a href="{% url 'tf' %}">Trade Finance</a></li>
+                                <li><a href="{% url 'bg' %}">Bank Guarantee</a></li>
+                                <li><a href="{% url 'slc' %}"> Standby Letter of Credit </a></li>
+                                <li><a href="{% url 'dlc' %}">Documentary Letter of Credit</a></li>
+                                <li><a href="{% url 'pof' %}">Proof of Funds</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+                    <div class="footer__widget footer__widget--address">
+                        <h5>Open Hours</h5>
+                        <p>We work all days a week, Please contact us for any inquiry.</p>
+                        <ul>
+                            <li>Monday - Friday: 11:00 am - 8:00 pm</li>
+                            <li>Saturday: 10:00 am - 6:00 pm</li>
+                            <li>Sunday: 11:00 am - 6:00 pm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <ul class="footer__copyright__links">
+                            <li><a href="#">Terms & Condition</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__copyright__text">
+                            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+    
+    <!-- Js Plugins -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nicescroll.min.j' %}s"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
