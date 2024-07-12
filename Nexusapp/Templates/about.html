@@ -37,7 +37,9 @@
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
-          
+        <div class="offcanvas__close">
+            <span class="fa fa-times"></span>
+        </div>  
         <div class="offcanvas__logo">
             <a href="{% url 'index' %}"><img src="{% static 'img/logo/Nexus Logo.png' %}" alt="Nexus"></a>
         </div>
@@ -89,8 +91,8 @@
                     <div class="col-lg-12">
                         <ul class="header_top_widget">
                             <li><i class="fa fa-map-marker"></i> Anjouan</li>
-                            <li><i class="fa fa-phone"></i>+441223790627</li>
-                            <li><i class="fa fa-envelope"></i> Info@nexus.com</li>
+                            <li> <a href="tel:+441223790627"><i class="fa fa-phone"></i>+441223790627</a></li>
+                            <li><a href="mailto:Info@nexus.com"><i class="fa fa-envelope"></i> Info@nexus.com </a></li>
                         </ul>
                     </div>
                 </div>
@@ -188,7 +190,7 @@
                              FINMA in Switzerland or BaFin in Germany. Additionally, it does not provide financial transactions or services originating from these jurisdictions.</p>
                              <p>The services of Nexus International are exclusively available to its approved clients and not to the general public.</p>
                              <p>Nexus International is a dynamic finance company providing a wide range of services for both private and corporate clients. The company boasts extensive expertise in trade finance solutions, private and corporate digital finance, and specializes in innovative blockchain finance services.</p>
-                             <p>Nexus International offer a variety of products in the trade finance sector, including finance guarantees, standby letters of credit, documentary letters of credit, proofs of funds, and warranties—whatever you need, we have it.We want to be one among the top trade finance companies for our reliable services offered with high professionalism</p>
+                             <p>Nexus International offer a variety of products in the trade finance sector, including finance guarantees, standby letters of credit, documentary letters of credit, proofs of funds, and warranties—whatever you need, we have it.We want to be one among the top trade finance companies for our reliable services offered with high professionalism.</p>
                              <p>The primary services of Nexus International are centered around our all-in-one wallet. Our user-friendly internet finance platform and mobile app provide clients with 24/7 access to private or corporate accounts, checking accounts, and debit card balances. Additionally, clients can make transfers via smartphones or tablets with multilingual customer support.</p>
                              <p>We want to be known for our Innovation and Tradition, successfully combining both principles.</p>
                              <p>We remain open to new developments in finance, welcoming progressive ideas and projects while continually exploring new financial models.</p>
@@ -242,7 +244,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="{% url 'index' %}"><img src="{% static 'img/logo/Nexus Logo.png' %}" alt="Nexus"></a>
+                            <a href="{% url 'index' %}"><img src="{% static 'img/logo/Nexus Logo01.png' %}" alt="Nexus"></a>
                         </div>
                     </div>
                 </div>
@@ -250,12 +252,10 @@
                     <div class="footer__widget">
                         <h5>Services</h5>
                         <div class="footer__widget">
-                            <ul>
-                                <li><a href="{% url 'tf' %}">Trade Finance</a></li>
-                                <li><a href="{% url 'bg' %}">Bank Guarantee</a></li>
-                                <li><a href="{% url 'slc' %}"> Standby Letter of Credit </a></li>
-                                <li><a href="{% url 'dlc' %}">Documentary Letter of Credit</a></li>
-                                <li><a href="{% url 'pof' %}">Proof of Funds</a></li>
+                             <ul>
+                                <li><a href="{% url 'tf' %}">Trade Finance Solutions </a></li>
+                                <li><a href="{% url 'facs' %}">Financial Advisory & Consulting services</a></li>
+                                <li><a href="{% url 'cfa' %}"> Corporate Finance Advisory</a></li>
                             </ul>
                         </div>
                     </div>
@@ -277,9 +277,8 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <ul class="footer__copyright__links">
-                            <li><a href="#">Terms & Condition</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Community</a></li>
+                            <li><a href="{% static 'img/services/Privacypolicynexus.pdf' %}" target="_blank">Privacy Policy</a></li>
+                            <li><a href="{% static 'img/services/Terms&conditionsnexus.pdf' %}" target="_blank">Terms & Condition</a></li> 
                         </ul>
                     </div>
                     <div class="col-lg-6 col-md-6">

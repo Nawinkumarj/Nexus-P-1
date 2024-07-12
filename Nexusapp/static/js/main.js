@@ -34,17 +34,6 @@
         $(".offcanvas-menu-overlay").removeClass("active");
     });
 
-    //Search Switch
-    $('.search-switch').on('click', function () {
-        $('.search-model').fadeIn(400);
-    });
-
-    $('.search-close-switch').on('click', function () {
-        $('.search-model').fadeOut(400, function () {
-            $('#search-input').val('');
-        });
-    });
-
     //Accordin Active
     $('.collapse').on('shown.bs.collapse', function () {
         $(this).prev().addClass('active');
@@ -82,22 +71,22 @@
             }
         }
     });
+
+    //mobile close navigation
+    document.querySelector('.offcanvas__close').addEventListener('click', function() {
+        document.querySelector('.offcanvas-menu-wrapper').classList.remove('active');
+        document.querySelector('.offcanvas-menu-overlay').classList.remove('active');
+    });
+    $('.offcanvas__close').on('click', function() {
+        $('.offcanvas-menu-wrapper').removeClass('active');
+        $('.offcanvas-menu-overlay').removeClass('active');
+    });
+    
     /*
         Select
     */
     $("select").niceSelect();
 
-    /*
-		History Scroll
-	 */
-    $(".nice-scroll").niceScroll({
-        cursorcolor: "rgba(135, 196, 23, 0.3)",
-        cursorwidth: "6px",
-        background: "rgba(255, 255, 255, 0.1)",
-        cursorborder: "",
-        autohidemode: false,
-        horizrailenabled: false
-    });
     // Swiper
 
     document.addEventListener('DOMContentLoaded', (event) => {
